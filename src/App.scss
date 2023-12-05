@@ -11,8 +11,19 @@
     padding-inline: 0.5%;
     background-color:#525d5e;
     color: #dfd4c9;
+    
 }
 a{
     text-decoration: none;
     color: inherit;
 }
+svg{
+    background-color: none;
+}
+
+svg:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+    text-shadow: 4px 11px 4px 0px rgba(0, 0, 0, 0.191);
+}
+

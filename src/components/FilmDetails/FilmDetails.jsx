@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import movies from "../../data/movies";
+import './FilmDetails.scss'
+import BackIcon from "../../assets/svg/BackIcon";
 
 const FilmDetails = () => {
   const { id } = useParams();
@@ -18,16 +20,17 @@ const FilmDetails = () => {
   }, [id]);
 
   return (
-    <article>
+    <article className="filmDetails">
       {filmDetail ? (
-        <>
-          <h2>{filmDetail.title}</h2>
+        <div className="detailWrapper">
+          <h2 className="detailHead">{filmDetail.title}</h2>
           <p>{filmDetail.year}</p>
           <p>{filmDetail.director}</p>
           <p>{filmDetail.duration}</p>
-          <p>{filmDetail.rate}</p>
-          <Link to="/">Back</Link>
-        </>
+          <p>{filmDetail.rate}⭐️</p>
+          <p>Genres: <br></br> {filmDetail.genre[0]} , {filmDetail.genre[1]}</p>
+          <Link to="/"><BackIcon/></Link>
+        </div>
       ) : (
         <p>Loading...</p>
       )}

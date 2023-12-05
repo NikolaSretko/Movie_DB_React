@@ -1,45 +1,81 @@
+/* Standardstile für filmCard und filmCardItem */
 .filmCard {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px; 
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; 
+  text-align: center;
+  max-width: 100%;
+}
+
+.filmCardItem {
+  border: 1px solid #dfd4c9;
+  border-radius: 6px;
+  width: 300px;
+  height: 40vh;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+    box-shadow: 4px 11px 4px 0px rgba(0, 0, 0, 0.191) inset;
   }
-  
-  .filmCardItem {
-    border: 1px solid #dfd4c9
-  }
-  
-  nav{
-    .sortFunk{
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin: 20px 0;
-    }
-    form{
-        text-align: center;
-    }
-  }
-  h1{
-    text-align: center;
-    font-size: 48px;
+}
+
+/* Media Query für Tablet */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .filmCard {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 10% ;
   }
 
-  button{
-    padding: 6px 15px;
-    border-radius: 18px;
-    border: 1px solid #dfd4c9;
-    &:hover
-    {
-        cursor: pointer;
-        transform: translateY(-4px);
-        box-shadow: 4px 11px 4px 0px rgba(0, 0, 0, 0.191);
-    }
-}
-input[type=text]{
+  input[type=text] {
     border: #dfd4c9;
     outline: none;
     background-color: #dfd4c9;
-    border-radius:18px ;
+    border-radius: 18px;
     color: #525d5e;
+  }
+}
+
+/* Media Query für Desktop */
+@media only screen and (min-width: 1024px) {
+  .filmCard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+nav .sortFunk {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+nav form {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+}
+
+button {
+  padding: 6px 15px;
+  border-radius: 18px;
+  border: 1px solid #dfd4c9;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+    box-shadow: 4px 11px 4px 0px rgba(0, 0, 0, 0.191);
+  }
+}
+
+input[type=text] {
+  border: #dfd4c9;
+  outline: none;
+  background-color: #dfd4c9;
+  border-radius: 18px;
+  color: #525d5e;
 }
