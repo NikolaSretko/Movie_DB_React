@@ -1,0 +1,46 @@
+/* styles.css (oder dein bevorzugtes Stylesheet) */
+
+.filmCard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px; 
+    text-align: center;
+  }
+  
+  .filmCardItem {
+    border: 1px solid #dfd4c9
+  }
+  
+  nav{
+    .sortFunk{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    form{
+        text-align: center;
+    }
+  }
+  h1{
+    text-align: center;
+    font-size: 48px;
+  }
+
+  button{
+    padding: 6px 15px;
+    border-radius: 18px;
+    border: 1px solid #dfd4c9;
+    &:hover
+    {
+        cursor: pointer;
+        transform: translateY(-4px);
+        box-shadow: 4px 11px 4px 0px rgba(0, 0, 0, 0.191);
+    }
+}
+input[type=text]{
+    border: #dfd4c9;
+    outline: none;
+    background-color: #dfd4c9;
+    border-radius:18px ;
+}
